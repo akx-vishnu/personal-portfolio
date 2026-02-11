@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize } from 'react-icons/fa';
-import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint } from 'react-icons/si';
+import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite } from 'react-icons/si';
 
 const Skills = () => {
     const skills = [
@@ -59,30 +59,15 @@ const Skills = () => {
             icon: <SiFlutter className="text-cyan-500" />,
             style: 'shadow-cyan-500',
         },
-        {
-            id: 10,
-            name: 'MySQL',
-            icon: <SiMysql className="text-blue-500" />,
-            style: 'shadow-blue-500',
-        },
-        {
-            id: 11,
-            name: 'Tkinter',
-            icon: <FaWindowMaximize className="text-gray-400" />,
-            style: 'shadow-gray-400',
-        },
+
+
         {
             id: 12,
             name: 'Flask',
             icon: <SiFlask className="text-white" />,
             style: 'shadow-white',
         },
-        {
-            id: 13,
-            name: 'Excel',
-            icon: <SiMicrosoftexcel className="text-green-500" />,
-            style: 'shadow-green-500',
-        },
+
         {
             id: 14,
             name: 'FastAPI',
@@ -91,16 +76,47 @@ const Skills = () => {
         },
         {
             id: 15,
+            name: 'Tkinter',
+            icon: <FaWindowMaximize className="text-gray-400" />,
+            style: 'shadow-gray-400',
+        },
+        {
+            id: 16,
+            name: 'PostgreSQL',
+            icon: <SiPostgresql className="text-blue-400" />,
+            style: 'shadow-blue-400',
+        },
+        {
+            id: 17,
+            name: 'MySQL',
+            icon: <SiMysql className="text-blue-500" />,
+            style: 'shadow-blue-500',
+        },
+        {
+            id: 18,
+            name: 'SQLite',
+            icon: <SiSqlite className="text-blue-300" />,
+            style: 'shadow-blue-300',
+        },
+        {
+            id: 19,
+            name: 'Excel',
+            icon: <SiMicrosoftexcel className="text-green-500" />,
+            style: 'shadow-green-500',
+        },
+        {
+            id: 20,
             name: 'Word',
             icon: <SiMicrosoftword className="text-blue-500" />,
             style: 'shadow-blue-500',
         },
         {
-            id: 16,
+            id: 21,
             name: 'PowerPoint',
             icon: <SiMicrosoftpowerpoint className="text-orange-500" />,
             style: 'shadow-orange-500',
         }
+
     ];
 
     return (

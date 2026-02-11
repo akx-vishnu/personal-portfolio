@@ -50,7 +50,7 @@ const Hero = () => {
                             </Link>
 
                             <a
-                                href="/resume.html"
+                                href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md border border-gray-500 hover:border-accent hover:text-accent hover:bg-gray-800/30 cursor-pointer duration-200"

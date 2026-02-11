@@ -66,7 +66,7 @@ const Contact = () => {
                                     <span className="text-lg">akx_vishnu@pm.me</span>
                                 </a>
 
-                                <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-accent duration-300 group">
+                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-accent duration-300 group">
                                     <div className="bg-gray-800 p-3 rounded-full group-hover:bg-accent/20 transition-colors">
                                         <FaFileDownload size={20} />
                                     </div>
