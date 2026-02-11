@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize } from 'react-icons/fa';
 import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite } from 'react-icons/si';
@@ -59,64 +58,60 @@ const Skills = () => {
             icon: <SiFlutter className="text-cyan-500" />,
             style: 'shadow-cyan-500',
         },
-
-
         {
-            id: 12,
+            id: 10,
             name: 'Flask',
             icon: <SiFlask className="text-white" />,
             style: 'shadow-white',
         },
-
         {
-            id: 14,
+            id: 11,
             name: 'FastAPI',
             icon: <SiFastapi className="text-teal-500" />,
             style: 'shadow-teal-500',
         },
         {
-            id: 15,
+            id: 12,
             name: 'Tkinter',
             icon: <FaWindowMaximize className="text-gray-400" />,
             style: 'shadow-gray-400',
         },
         {
-            id: 16,
+            id: 13,
             name: 'PostgreSQL',
             icon: <SiPostgresql className="text-blue-400" />,
             style: 'shadow-blue-400',
         },
         {
-            id: 17,
+            id: 14,
             name: 'MySQL',
             icon: <SiMysql className="text-blue-500" />,
             style: 'shadow-blue-500',
         },
         {
-            id: 18,
+            id: 15,
             name: 'SQLite',
             icon: <SiSqlite className="text-blue-300" />,
             style: 'shadow-blue-300',
         },
         {
-            id: 19,
+            id: 16,
             name: 'Excel',
             icon: <SiMicrosoftexcel className="text-green-500" />,
             style: 'shadow-green-500',
         },
         {
-            id: 20,
+            id: 17,
             name: 'Word',
             icon: <SiMicrosoftword className="text-blue-500" />,
             style: 'shadow-blue-500',
         },
         {
-            id: 21,
+            id: 18,
             name: 'PowerPoint',
             icon: <SiMicrosoftpowerpoint className="text-orange-500" />,
             style: 'shadow-orange-500',
         }
-
     ];
 
     return (

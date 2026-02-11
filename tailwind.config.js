@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        signature: ['Great Vibes'],
       },
       animation: {
         'slow-spin': 'spin 10s linear infinite',

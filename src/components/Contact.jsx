@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FaEnvelope, FaFileDownload } from 'react-icons/fa';
 
 const Contact = () => {
@@ -49,7 +50,12 @@ const Contact = () => {
                     <p className="py-6 text-gray-300">Submit the form below to get in touch with me</p>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-8 justify-center items-start">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="flex flex-col md:flex-row gap-8 justify-center items-start"
+                >
                     {/* Left Column: Contact Info & Resume */}
                     <div className="w-full md:w-1/2 flex flex-col gap-6">
                         <div className="glass-effect p-6 rounded-lg">
@@ -83,6 +89,7 @@ const Contact = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Enter your name"
+                                aria-label="Enter your name"
                                 className="p-3 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                                 required
                             />
@@ -90,6 +97,7 @@ const Contact = () => {
                                 type="email"
                                 name="email"
                                 placeholder="Enter your email"
+                                aria-label="Enter your email"
                                 className="my-4 p-3 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                                 required
                             />
@@ -97,6 +105,7 @@ const Contact = () => {
                                 name="message"
                                 rows="8"
                                 placeholder="Enter your message"
+                                aria-label="Enter your message"
                                 className="p-3 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"
                                 required
                             ></textarea>
@@ -117,7 +126,7 @@ const Contact = () => {
                             )}
                         </form>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

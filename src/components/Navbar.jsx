@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -58,30 +58,41 @@ const Navbar = () => {
                 <div
                     onClick={() => setNav(!nav)}
                     className="cursor-pointer pr-4 z-10 text-gray-300 md:hidden hover:text-accent transition-colors duration-200"
+                    aria-label="Toggle navigation"
+                    role="button"
+                    tabIndex={0}
                 >
                     {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
                 </div>
 
-                {nav && (
-                    <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-primary to-secondary text-gray-300">
-                        {links.map(({ id, link }) => (
-                            <li
-                                key={id}
-                                className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-accent duration-200"
-                            >
-                                <Link
-                                    onClick={() => setNav(!nav)}
-                                    to={link}
-                                    smooth={true}
-                                    duration={500}
-                                    offset={-80}
+                <AnimatePresence>
+                    {nav && (
+                        <motion.ul
+                            initial={{ opacity: 0, x: '-100%' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: '-100%' }}
+                            transition={{ duration: 0.3 }}
+                            className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-primary/95 to-secondary/95 backdrop-blur-md text-gray-300 z-40"
+                        >
+                            {links.map(({ id, link }) => (
+                                <li
+                                    key={id}
+                                    className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-accent duration-200"
                                 >
-                                    {link}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                                    <Link
+                                        onClick={() => setNav(!nav)}
+                                        to={link}
+                                        smooth={true}
+                                        duration={500}
+                                        offset={-80}
+                                    >
+                                        {link}
+                                    </Link>
+                                </li>
+                            ))}
+                        </motion.ul>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     );
