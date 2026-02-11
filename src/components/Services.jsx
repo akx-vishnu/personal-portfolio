@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaBusinessTime, FaUniversity, FaUserTie, FaCalendarAlt, FaBoxOpen } from 'react-icons/fa';
+import { FaLaptopCode, FaBusinessTime, FaUniversity, FaUserTie, FaCalendarAlt, FaBoxOpen, FaProjectDiagram } from 'react-icons/fa';
 
 const Services = () => {
     const services = [
@@ -39,6 +39,12 @@ const Services = () => {
             title: 'Product Showcases',
             icon: <FaBoxOpen size={40} className="text-purple-500" />,
             description: 'Attractive product showcase pages with high-quality images, detailed descriptions, and smooth animations to highlight features.',
+        },
+        {
+            id: 7,
+            title: 'College Projects',
+            icon: <FaProjectDiagram size={40} className="text-pink-500" />,
+            description: 'Assistance with college second year and final year projects, including documentation, coding, and implementation.',
         },
     ];
 
