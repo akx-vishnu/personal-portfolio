@@ -11,9 +11,9 @@ const Projects = () => {
             techStack: ['React', 'Vite', 'Flask', 'FastAPI', 'SQLAlchemy', 'Tesseract OCR', 'Groq Llama-3'],
             links: {
                 github: 'https://github.com/akx-vishnu/EcoScan-AI',
-                demo: null, // GitHub-only
+                demo: 'https://incondite-eschatological-lia.ngrok-free.dev/',
             },
-            status: 'GitHub-only (ngrok-based dev demo)',
+            status: 'Development Site (ngrok)',
         },
         {
             id: 2,
