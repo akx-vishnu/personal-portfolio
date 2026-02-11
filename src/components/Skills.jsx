@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize } from 'react-icons/fa';
-import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel } from 'react-icons/si';
+import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint } from 'react-icons/si';
 
 const Skills = () => {
     const skills = [
@@ -82,6 +82,24 @@ const Skills = () => {
             name: 'Excel',
             icon: <SiMicrosoftexcel className="text-green-500" />,
             style: 'shadow-green-500',
+        },
+        {
+            id: 14,
+            name: 'FastAPI',
+            icon: <SiFastapi className="text-teal-500" />,
+            style: 'shadow-teal-500',
+        },
+        {
+            id: 15,
+            name: 'Word',
+            icon: <SiMicrosoftword className="text-blue-500" />,
+            style: 'shadow-blue-500',
+        },
+        {
+            id: 16,
+            name: 'PowerPoint',
+            icon: <SiMicrosoftpowerpoint className="text-orange-500" />,
+            style: 'shadow-orange-500',
         }
     ];
 
