@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaFileDownload } from 'react-icons/fa';
+import { FaEnvelope, FaFileDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
     // ⚠️ REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
@@ -78,6 +78,20 @@ const Contact = () => {
                                     </div>
                                     <span className="text-lg">View Resume</span>
                                 </a>
+
+                                <a href="https://in.linkedin.com/in/akx-vishnu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-accent duration-300 group">
+                                    <div className="bg-gray-800 p-3 rounded-full group-hover:bg-accent/20 transition-colors">
+                                        <FaLinkedin size={20} />
+                                    </div>
+                                    <span className="text-lg">LinkedIn Profile</span>
+                                </a>
+
+                                <a href="https://github.com/akx-vishnu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-accent duration-300 group">
+                                    <div className="bg-gray-800 p-3 rounded-full group-hover:bg-accent/20 transition-colors">
+                                        <FaGithub size={20} />
+                                    </div>
+                                    <span className="text-lg">GitHub Profile</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -127,8 +141,8 @@ const Contact = () => {
                         </form>
                     </div>
                 </motion.div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
