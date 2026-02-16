@@ -1,149 +1,87 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize } from 'react-icons/fa';
-import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize, FaDocker } from 'react-icons/fa';
+import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite, SiNextdotjs, SiVite, SiFramer, SiVercel, SiNgrok } from 'react-icons/si';
+import SkillSphere from './canvas/SkillSphere';
 
 const Skills = () => {
     const skills = [
-        {
-            id: 1,
-            name: 'HTML',
-            icon: <FaHtml5 className="text-orange-500" />,
-            style: 'shadow-orange-500',
-        },
-        {
-            id: 2,
-            name: 'CSS',
-            icon: <FaCss3Alt className="text-blue-500" />,
-            style: 'shadow-blue-500',
-        },
-        {
-            id: 3,
-            name: 'JavaScript',
-            icon: <span className="font-bold text-yellow-500 text-3xl">JS</span>, // React icons doesn't have a simple JS icon sometimes, or use SiJavascript
-            style: 'shadow-yellow-500',
-        },
-        {
-            id: 4,
-            name: 'React',
-            icon: <FaReact className="text-cyan-400" />,
-            style: 'shadow-cyan-400',
-        },
-        {
-            id: 5,
-            name: 'Tailwind',
-            icon: <SiTailwindcss className="text-sky-400" />,
-            style: 'shadow-sky-400',
-        },
-        {
-            id: 6,
-            name: 'Node.js',
-            icon: <FaNodeJs className="text-green-500" />,
-            style: 'shadow-green-500',
-        },
-        {
-            id: 7,
-            name: 'Python',
-            icon: <FaPython className="text-yellow-400" />,
-            style: 'shadow-yellow-400',
-        },
-        {
-            id: 8,
-            name: 'Java',
-            icon: <FaJava className="text-red-500" />,
-            style: 'shadow-red-500',
-        },
-        {
-            id: 9,
-            name: 'Flutter',
-            icon: <SiFlutter className="text-cyan-500" />,
-            style: 'shadow-cyan-500',
-        },
-        {
-            id: 10,
-            name: 'Flask',
-            icon: <SiFlask className="text-white" />,
-            style: 'shadow-white',
-        },
-        {
-            id: 11,
-            name: 'FastAPI',
-            icon: <SiFastapi className="text-teal-500" />,
-            style: 'shadow-teal-500',
-        },
-        {
-            id: 12,
-            name: 'Tkinter',
-            icon: <FaWindowMaximize className="text-gray-400" />,
-            style: 'shadow-gray-400',
-        },
-        {
-            id: 13,
-            name: 'PostgreSQL',
-            icon: <SiPostgresql className="text-blue-400" />,
-            style: 'shadow-blue-400',
-        },
-        {
-            id: 14,
-            name: 'MySQL',
-            icon: <SiMysql className="text-blue-500" />,
-            style: 'shadow-blue-500',
-        },
-        {
-            id: 15,
-            name: 'SQLite',
-            icon: <SiSqlite className="text-blue-300" />,
-            style: 'shadow-blue-300',
-        },
-        {
-            id: 16,
-            name: 'Excel',
-            icon: <SiMicrosoftexcel className="text-green-500" />,
-            style: 'shadow-green-500',
-        },
-        {
-            id: 17,
-            name: 'Word',
-            icon: <SiMicrosoftword className="text-blue-500" />,
-            style: 'shadow-blue-500',
-        },
-        {
-            id: 18,
-            name: 'PowerPoint',
-            icon: <SiMicrosoftpowerpoint className="text-orange-500" />,
-            style: 'shadow-orange-500',
-        }
+        { id: 1, name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
+        { id: 2, name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
+        { id: 3, name: 'JavaScript', icon: <span className="font-bold text-yellow-500 text-3xl">JS</span> },
+        { id: 4, name: 'React', icon: <FaReact className="text-cyan-400" /> },
+        { id: 5, name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
+        { id: 6, name: 'Vite', icon: <SiVite className="text-purple-500" /> },
+        { id: 7, name: 'Tailwind', icon: <SiTailwindcss className="text-sky-400" /> },
+        { id: 8, name: 'Framer Motion', icon: <SiFramer className="text-pink-500" /> },
+        { id: 9, name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+        { id: 10, name: 'Python', icon: <FaPython className="text-yellow-400" /> },
+        { id: 11, name: 'Java', icon: <FaJava className="text-red-500" /> },
+        { id: 12, name: 'Docker', icon: <FaDocker className="text-blue-500" /> },
+        { id: 13, name: 'Vercel', icon: <SiVercel className="text-white" /> },
+        { id: 14, name: 'Ngrok', icon: <SiNgrok className="text-blue-600" /> },
+        { id: 15, name: 'Flutter', icon: <SiFlutter className="text-cyan-500" /> },
+        { id: 16, name: 'Flask', icon: <SiFlask className="text-white" /> },
+        { id: 17, name: 'FastAPI', icon: <SiFastapi className="text-teal-500" /> },
+        { id: 18, name: 'Tkinter', icon: <FaWindowMaximize className="text-gray-400" /> },
+        { id: 19, name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-400" /> },
+        { id: 20, name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },
+        { id: 21, name: 'SQLite', icon: <SiSqlite className="text-blue-300" /> },
+        { id: 22, name: 'Excel', icon: <SiMicrosoftexcel className="text-green-500" /> },
+        { id: 23, name: 'Word', icon: <SiMicrosoftword className="text-blue-500" /> },
+        { id: 24, name: 'PowerPoint', icon: <SiMicrosoftpowerpoint className="text-orange-500" /> }
     ];
 
     return (
         <div
             name="skills"
-            className="w-full min-h-screen bg-gradient-to-b from-primary via-primary to-secondary text-white py-20"
+            className="w-full min-h-screen bg-gradient-to-b from-primary to-black-100 text-white py-20 relative overflow-hidden"
         >
-            <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
-                <div className="pb-8">
-                    <p className="text-4xl font-bold border-b-4 border-accent inline">
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full relative z-10">
+                <div className="pb-8 text-center">
+                    <motion.p
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl font-bold inline border-b-4 border-neon-purple text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-blue"
+                    >
                         Skills
-                    </p>
-                    <p className="py-6 text-gray-300 text-lg">
-                        These are the technologies I've worked with
-                    </p>
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="py-6 text-gray-400 text-lg"
+                    >
+                        Technologies I work with
+                    </motion.p>
                 </div>
 
-                <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-                    {skills.map(({ id, name, icon, style }) => (
-                        <motion.div
-                            key={id}
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className={`shadow-md hover:scale-105 duration-500 py-6 rounded-lg glass-effect ${style}`}
-                        >
-                            <div className="text-5xl mx-auto w-fit mb-4">{icon}</div>
-                            <p className="mt-4 font-semibold uppercase tracking-wider">{name}</p>
-                        </motion.div>
-                    ))}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+                    {/* 3D Sphere */}
+                    <div className="w-full md:w-1/2 h-[500px]">
+                        <SkillSphere skills={skills} />
+                    </div>
+
+                    {/* Text Grid Fallback / Complement (Hidden on mobile if desired, or kept as list) */}
+                    {/* Let's keep a sleek grid for better readability as well, or just skills list */}
+                    <div className="w-full md:w-1/2 grid grid-cols-3 sm:grid-cols-4 gap-6 text-center">
+                        {skills.map(({ id, name, icon }) => (
+                            <motion.div
+                                key={id}
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                whileHover={{ scale: 1.1, color: '#00f3ff' }}
+                                transition={{ duration: 0.3 }}
+                                className="flex flex-col items-center justify-center p-4 rounded-xl glass-card hover:shadow-neon cursor-pointer group"
+                            >
+                                <div className="text-4xl mb-2 group-hover:scale-110 duration-300">{icon}</div>
+                                <p className="text-sm font-medium text-gray-400 group-hover:text-white">{name}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

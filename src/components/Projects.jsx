@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import TiltCard from './ui/TiltCard'; // Import the new TiltCard
 
 const Projects = () => {
     const projects = [
@@ -30,66 +31,88 @@ const Projects = () => {
     return (
         <div
             name="projects"
-            className="w-full min-h-screen bg-gradient-to-b from-secondary via-secondary to-primary text-white py-20"
+            className="w-full min-h-screen bg-primary text-white py-20 relative overflow-hidden"
         >
-            <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full">
-                <div className="pb-8">
-                    <p className="text-4xl font-bold inline border-b-4 border-accent">
+            {/* Background Glow */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+                <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-neon-purple/20 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-neon-blue/20 rounded-full blur-[100px]" />
+            </div>
+
+            <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full z-10 relative">
+                <div className="pb-12 text-center md:text-left">
+                    <motion.h2
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-4xl md:text-5xl font-bold inline border-b-4 border-neon-blue text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple"
+                    >
                         Projects
+                    </motion.h2>
+                    <p className="py-6 text-gray-400 max-w-2xl text-lg">
+                        Check out some of my recent work. Hover over the cards to interact.
                     </p>
-                    <p className="py-6 text-gray-300">Check out some of my work right here</p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-8 px-12 sm:px-0">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 px-4 sm:px-0">
                     {projects.map(({ id, title, description, techStack, links, status }) => (
                         <motion.div
                             key={id}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: id * 0.2 }}
                             viewport={{ once: true }}
-                            className="glass-effect rounded-lg p-6 flex flex-col h-full hover:scale-[1.02] duration-300"
                         >
-                            <h3 className="text-2xl font-bold mb-3 text-accent">{title}</h3>
-                            <p className="text-gray-300 mb-4 flex-grow font-light leading-relaxed">
-                                {description}
-                            </p>
+                            <TiltCard className="h-full">
+                                <div className="glass-card rounded-2xl p-8 flex flex-col h-full hover:shadow-neon duration-500 border border-gray-700/50 group bg-tertiary">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h3 className="text-3xl font-bold text-white group-hover:text-neon-blue duration-300">{title}</h3>
+                                    </div>
 
-                            {status && (
-                                <p className="text-xs text-yellow-500 mb-2 italic">* {status}</p>
-                            )}
+                                    <p className="text-gray-400 mb-6 flex-grow font-light leading-relaxed text-sm md:text-base">
+                                        {description}
+                                    </p>
 
-                            <div className="flex flex-wrap gap-2 mb-6">
-                                {techStack.map((tech, index) => (
-                                    <span
-                                        key={index}
-                                        className="text-xs font-semibold px-2 py-1 rounded bg-gray-800 text-gray-300 border border-gray-700"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
+                                    {status && (
+                                        <p className="text-xs text-yellow-400 mb-4 italic flex items-center">
+                                            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></span>
+                                            {status}
+                                        </p>
+                                    )}
 
-                            <div className="flex gap-4 mt-auto">
-                                <a
-                                    href={links.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-1/2 px-6 py-2 duration-200 hover:scale-105 rounded-md border border-gray-500 hover:border-accent hover:text-accent hover:bg-gray-800/30 flex items-center justify-center gap-2"
-                                >
-                                    <FaGithub /> Code
-                                </a>
-                                {links.demo && (
-                                    <a
-                                        href={links.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-1/2 px-6 py-2 duration-200 hover:scale-105 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
-                                    >
-                                        <FaExternalLinkAlt /> Live
-                                    </a>
-                                )}
-                            </div>
+                                    <div className="flex flex-wrap gap-2 mb-8">
+                                        {techStack.map((tech, index) => (
+                                            <span
+                                                key={index}
+                                                className="text-xs font-medium px-3 py-1 rounded-full bg-black-200 text-neon-blue border border-gray-700 group-hover:border-neon-blue/50 duration-300"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex gap-4 mt-auto z-20 relative transform translate-z-10">
+                                        <a
+                                            href={links.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 px-6 py-3 rounded-lg border border-gray-600 hover:border-neon-blue hover:text-neon-blue hover:bg-neon-blue/10 flex items-center justify-center gap-2 transition-all duration-300 font-semibold"
+                                        >
+                                            <FaGithub size={20} /> Code
+                                        </a>
+                                        {links.demo && (
+                                            <a
+                                                href={links.demo}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex-1 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-blue to-accent text-primary font-bold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-neon-blue/30 hover:scale-105 transition-all duration-300"
+                                            >
+                                                <FaExternalLinkAlt size={18} /> Live
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </TiltCard>
                         </motion.div>
                     ))}
                 </div>

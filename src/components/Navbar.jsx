@@ -30,12 +30,12 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full h-20 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+            className={`fixed w-full h-20 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/80 backdrop-blur-md shadow-neon border-b border-gray-800/50' : 'bg-transparent'
                 }`}
         >
             <div className="flex justify-between items-center w-full h-full px-4 md:px-12 text-white">
                 <div>
-                    <h1 className="text-3xl font-bold font-signature ml-2 cursor-pointer hover:text-accent transition-colors duration-300">
+                    <h1 className="text-3xl font-bold font-signature ml-2 cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple hover:scale-105 transition-transform duration-300">
                         <Link to="hero" smooth={true} duration={500}>
                             Akshaj
                         </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
                     {links.map(({ id, link }) => (
                         <li
                             key={id}
-                            className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-accent duration-200"
+                            className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-110 hover:text-neon-blue hover:shadow-neon-sm duration-300"
                         >
                             <Link to={link} smooth={true} duration={500} offset={-80}>
                                 {link}
@@ -57,7 +57,7 @@ const Navbar = () => {
 
                 <div
                     onClick={() => setNav(!nav)}
-                    className="cursor-pointer pr-4 z-10 text-gray-300 md:hidden hover:text-accent transition-colors duration-200"
+                    className="cursor-pointer pr-4 z-50 text-gray-300 md:hidden hover:text-neon-blue transition-colors duration-200"
                     aria-label="Toggle navigation"
                     role="button"
                     tabIndex={0}
@@ -68,16 +68,16 @@ const Navbar = () => {
                 <AnimatePresence>
                     {nav && (
                         <motion.ul
-                            initial={{ opacity: 0, x: '-100%' }}
+                            initial={{ opacity: 0, x: '100%' }}
                             animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: '-100%' }}
+                            exit={{ opacity: 0, x: '100%' }}
                             transition={{ duration: 0.3 }}
-                            className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-primary/95 to-secondary/95 backdrop-blur-md text-gray-300 z-40"
+                            className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black-100/95 backdrop-blur-xl text-gray-300 z-40"
                         >
                             {links.map(({ id, link }) => (
                                 <li
                                     key={id}
-                                    className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-accent duration-200"
+                                    className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-neon-purple duration-200"
                                 >
                                     <Link
                                         onClick={() => setNav(!nav)}
