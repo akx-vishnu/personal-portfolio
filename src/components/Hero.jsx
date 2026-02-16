@@ -4,21 +4,24 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import Hero3D from './canvas/Hero3D';
+import TechCanvas from './canvas/TechCanvas';
 import MagneticButton from './ui/MagneticButton';
 
 const Hero = () => {
     return (
         <div
             name="hero"
-            className="relative h-screen w-full overflow-hidden bg-black-100"
+            className="relative h-screen w-full overflow-hidden bg-primary"
         >
+            {/* Background Starfield */}
             <Hero3D />
 
-            <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row text-white z-10 relative">
-                <div className="flex flex-col justify-center h-full w-full pointer-events-none">
+            <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center h-full px-4 text-white z-10 relative">
+                {/* Left Column: Text */}
+                <div className="flex flex-col justify-center h-full w-full md:w-1/2 pt-20 md:pt-0 pointer-events-none">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="pointer-events-auto"
                     >
@@ -28,16 +31,15 @@ const Hero = () => {
                             </span>
                         </div>
 
-                        <h2 className="text-4xl sm:text-7xl font-bold text-white mb-2 tracking-tight">
+                        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
                             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">AKSHAJ V NAIR</span>
                         </h2>
-                        <h3 className="text-2xl sm:text-4xl font-semibold text-gray-300 mb-6">
+                        <h3 className="text-xl sm:text-3xl font-semibold text-gray-300 mb-6">
                             Modern Web Developer | React Specialist
                         </h3>
 
                         <p className="text-gray-400 py-4 max-w-lg text-lg leading-relaxed">
                             Crafting high-performance, UI/UX-focused React experiences for real-world businesses.
-                            Passionate about building clean, efficient, and interactive web applications.
                         </p>
 
                         <div className="flex flex-wrap gap-4 mt-8">
@@ -67,6 +69,18 @@ const Hero = () => {
                                 </a>
                             </MagneticButton>
                         </div>
+                    </motion.div>
+                </div>
+
+                {/* Right Column: 3D Tech Object */}
+                <div className="w-full md:w-1/2 h-[40vh] md:h-full flex items-center justify-center relative z-20">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="w-full h-full"
+                    >
+                        <TechCanvas />
                     </motion.div>
                 </div>
             </div>

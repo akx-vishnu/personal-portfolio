@@ -3,38 +3,28 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaFileDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
-    // ⚠️ REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzrF7tPhQMrKFWqFutpl5-LiqvbGWA_c_t7tGNfLRROBTRj606znY8k-vV01GQq0XfvQA/exec';
+
 
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState('');
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        setStatus('');
 
         const form = e.target;
-        const formData = new FormData(form);
+        const name = form.name.value;
+        const email = form.email.value;
+        const message = form.message.value;
 
-        try {
-            const response = await fetch(scriptURL, {
-                method: 'POST',
-                body: formData,
-            });
+        const whatsappNumber = "919496202179";
+        const text = `*New Contact Request*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
-            if (response.ok) {
-                setStatus('SUCCESS');
-                form.reset();
-            } else {
-                setStatus('ERROR');
-            }
-        } catch (error) {
-            console.error('Error!', error.message);
-            setStatus('ERROR');
-        } finally {
-            setLoading(false);
-        }
+        window.open(url, '_blank');
+        setLoading(false);
+        setStatus('SUCCESS');
+        form.reset();
     };
 
     return (
@@ -152,7 +142,7 @@ const Contact = () => {
                             </button>
 
                             {status === 'SUCCESS' && (
-                                <p className="text-green-400 mt-4 text-center font-medium">Message sent successfully!</p>
+                                <p className="text-green-400 mt-4 text-center font-medium">Redirecting to WhatsApp...</p>
                             )}
                             {status === 'ERROR' && (
                                 <p className="text-red-400 mt-4 text-center font-medium">Something went wrong. Please try again.</p>

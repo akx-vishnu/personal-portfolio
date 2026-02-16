@@ -8,7 +8,7 @@ import { useFrame } from '@react-three/fiber';
 
 const Stars = (props) => {
     const ref = useRef();
-    const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+    const sphere = random.inBox(new Float32Array(5000), { sides: [20, 20, 20] });
 
     useFrame((state, delta) => {
         ref.current.rotation.x -= delta / 10;
@@ -51,7 +51,6 @@ const Hero3D = () => {
                 <Suspense fallback={null}>
                     <ambientLight intensity={1} />
                     <directionalLight position={[3, 2, 1]} />
-                    <AnimatedSphere />
                     <Stars />
                     <OrbitControls enableZoom={false} autoRotate speed={0.5} />
                 </Suspense>
