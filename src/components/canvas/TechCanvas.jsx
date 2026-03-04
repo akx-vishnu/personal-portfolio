@@ -1,23 +1,45 @@
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Float, ContactShadows, Environment } from '@react-three/drei';
 import * as THREE from 'three';
 
-const Laptop = () => {
+const Laptop = ({ isMobile }) => {
     const group = useRef();
+    const scrollY = useRef(0);
+
+    useEffect(() => {
+        if (isMobile) {
+            const handleScroll = () => {
+                scrollY.current = window.scrollY;
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            return () => window.removeEventListener('scroll', handleScroll);
+        }
+    }, [isMobile]);
 
     useFrame((state) => {
+        if (!group.current) return;
         const t = state.clock.getElapsedTime();
-        // Hover animation
-        group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, Math.cos(t / 2) / 10 + 0.25, 0.1);
-        group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, Math.sin(t / 4) / 10, 0.1);
-        group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 4) / 20, 0.1);
-        group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-5 + Math.sin(t)) / 5, 0.1);
+
+        if (isMobile) {
+            // Scroll-driven rotation on mobile
+            const scrollFactor = scrollY.current * 0.002;
+            group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, 0.25 + Math.sin(scrollFactor) * 0.3, 0.1);
+            group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, scrollFactor * 0.5, 0.1);
+            group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(scrollFactor * 0.5) * 0.1, 0.1);
+            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-5 + Math.sin(t)) / 5, 0.1);
+        } else {
+            // Hover animation on desktop
+            group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, Math.cos(t / 2) / 10 + 0.25, 0.1);
+            group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, Math.sin(t / 4) / 10, 0.1);
+            group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 4) / 20, 0.1);
+            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-5 + Math.sin(t)) / 5, 0.1);
+        }
     });
 
     return (
         <group ref={group} dispose={null} rotation={[0.4, 0, 0]}>
-            <Float floatIntensity={2} rotationIntensity={0.5}>
+            <Float floatIntensity={isMobile ? 1 : 2} rotationIntensity={isMobile ? 0.2 : 0.5}>
                 {/* Base */}
                 <mesh position={[0, -0.6, 0]}>
                     <boxGeometry args={[3.2, 0.2, 2.2]} />
@@ -75,18 +97,30 @@ const Laptop = () => {
 };
 
 const TechCanvas = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
-        <div className="w-full h-[400px] md:h-full cursor-grab active:cursor-grabbing">
-            <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
+        <div className={`w-full h-[400px] md:h-full ${isMobile ? '' : 'cursor-grab active:cursor-grabbing'}`}>
+            <Canvas
+                camera={{ position: [0, 0, isMobile ? 9 : 6], fov: isMobile ? 55 : 45 }}
+                style={{ touchAction: isMobile ? 'auto' : 'none' }}
+            >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
                 <pointLight position={[-10, -10, -10]} intensity={0.5} color="#bc13fe" />
 
                 <Suspense fallback={null}>
-                    <Laptop />
+                    <Laptop isMobile={isMobile} />
                     <Environment preset="city" />
                     <ContactShadows position={[0, -2, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />
-                    <OrbitControls enableZoom={false} enablePan={false} />
+                    {!isMobile && <OrbitControls enableZoom={false} enablePan={false} />}
                 </Suspense>
             </Canvas>
         </div>

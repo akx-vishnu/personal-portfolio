@@ -60,8 +60,8 @@ const Skills = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                    {/* 3D Sphere */}
-                    <div className="w-full md:w-1/2 h-[500px]">
+                    {/* 3D Sphere - hidden on mobile to prevent scroll blocking */}
+                    <div className="hidden md:block w-full md:w-1/2 h-[500px]">
                         <SkillSphere skills={skills} />
                     </div>
 

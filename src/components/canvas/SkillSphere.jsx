@@ -63,7 +63,7 @@ const SkillSphere = ({ skills }) => {
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} />
                 <RotatingSphere skills={skills} />
-                <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+                <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
             </Canvas>
         </div>
     );
