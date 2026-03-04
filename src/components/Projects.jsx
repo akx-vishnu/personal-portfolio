@@ -12,9 +12,7 @@ const Projects = () => {
             techStack: ['React', 'Vite', 'Flask', 'FastAPI', 'SQLAlchemy', 'Tesseract OCR', 'Groq Llama-3'],
             links: {
                 github: 'https://github.com/akx-vishnu/EcoScan-AI',
-                demo: 'https://incondite-eschatological-lia.ngrok-free.dev/',
             },
-            status: 'Development Site (ngrok)',
         },
         {
             id: 2,
@@ -24,6 +22,26 @@ const Projects = () => {
             links: {
                 github: 'https://github.com/akx-vishnu/Peepul-Tree-School',
                 demo: 'https://peepul-tree-school.vercel.app/',
+            },
+        },
+        {
+            id: 3,
+            title: 'Rudra Travel Service',
+            description: 'A professional, safety-first corporate transport website for Coimbatore. Features responsive design, Framer Motion animations, and Google Sheets integration for reliable employee commute management. Trustworthy, punctual, and MSME registered service since 2014.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Google Sheets'],
+            links: {
+                github: 'https://github.com/akx-vishnu/rudratravelservice',
+                demo: 'https://rudratravelservice.vercel.app/',
+            },
+        },
+        {
+            id: 4,
+            title: 'LittleCloud Baby Wear',
+            description: 'A premium React B2B portal for an organic baby clothing manufacturer. Features real-time search, category filtering, and direct WhatsApp integration for bulk inquiries. Offers high-performance aesthetics and a fully configurable content system via a central config file.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'WhatsApp API'],
+            links: {
+                github: 'https://github.com/akx-vishnu/littlecloud-clothingbrand',
+                demo: 'https://littlecloud-clothingbrand.vercel.app/',
             },
         }
     ];
