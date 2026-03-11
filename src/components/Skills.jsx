@@ -1,35 +1,35 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize, FaDocker } from 'react-icons/fa';
-import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite, SiNextdotjs, SiVite, SiFramer, SiVercel, SiNgrok } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaPython, FaWindowMaximize, FaDocker, FaGitAlt } from 'react-icons/fa';
+import { SiTailwindcss, SiFlutter, SiMysql, SiFlask, SiMicrosoftexcel, SiFastapi, SiMicrosoftword, SiMicrosoftpowerpoint, SiPostgresql, SiSqlite, SiNextdotjs, SiVite, SiFramer, SiVercel, SiNgrok, SiSocketdotio, SiRadixui, SiOpenai } from 'react-icons/si';
 import SkillSphere from './canvas/SkillSphere';
 import TiltCard from './ui/TiltCard';
 import MagneticButton from './ui/MagneticButton';
 const Skills = () => {
     const skills = [
-        { id: 1, name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
-        { id: 2, name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
-        { id: 3, name: 'JavaScript', icon: <span className="font-bold text-yellow-500 text-3xl">JS</span> },
+        { id: 1, name: 'Python', icon: <FaPython className="text-yellow-400" /> },
+        { id: 2, name: 'JavaScript', icon: <span className="font-bold text-yellow-500 text-3xl">JS</span> },
+        { id: 3, name: 'TypeScript', icon: <span className="font-bold text-blue-500 text-3xl">TS</span> },
         { id: 4, name: 'React', icon: <FaReact className="text-cyan-400" /> },
         { id: 5, name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
-        { id: 6, name: 'Vite', icon: <SiVite className="text-purple-500" /> },
-        { id: 7, name: 'Tailwind', icon: <SiTailwindcss className="text-sky-400" /> },
-        { id: 8, name: 'Framer Motion', icon: <SiFramer className="text-pink-500" /> },
-        { id: 9, name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
-        { id: 10, name: 'Python', icon: <FaPython className="text-yellow-400" /> },
-        { id: 11, name: 'Java', icon: <FaJava className="text-red-500" /> },
-        { id: 12, name: 'Docker', icon: <FaDocker className="text-blue-500" /> },
-        { id: 13, name: 'Vercel', icon: <SiVercel className="text-white" /> },
-        { id: 14, name: 'Ngrok', icon: <SiNgrok className="text-blue-600" /> },
-        { id: 15, name: 'Flutter', icon: <SiFlutter className="text-cyan-500" /> },
-        { id: 16, name: 'Flask', icon: <SiFlask className="text-white" /> },
-        { id: 17, name: 'FastAPI', icon: <SiFastapi className="text-teal-500" /> },
-        { id: 18, name: 'Tkinter', icon: <FaWindowMaximize className="text-gray-400" /> },
-        { id: 19, name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-400" /> },
-        { id: 20, name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },
-        { id: 21, name: 'SQLite', icon: <SiSqlite className="text-blue-300" /> },
-        { id: 22, name: 'Excel', icon: <SiMicrosoftexcel className="text-green-500" /> },
-        { id: 23, name: 'Word', icon: <SiMicrosoftword className="text-blue-500" /> },
-        { id: 24, name: 'PowerPoint', icon: <SiMicrosoftpowerpoint className="text-orange-500" /> }
+        { id: 6, name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+        { id: 7, name: 'NestJS', icon: <SiNextdotjs className="text-red-500" /> },
+        { id: 8, name: 'Flask', icon: <SiFlask className="text-white" /> },
+        { id: 9, name: 'FastAPI', icon: <SiFastapi className="text-teal-500" /> },
+        { id: 10, name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-400" /> },
+        { id: 11, name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },
+        { id: 12, name: 'SQLite', icon: <SiSqlite className="text-blue-300" /> },
+        { id: 13, name: 'Tailwind', icon: <SiTailwindcss className="text-sky-400" /> },
+        { id: 14, name: 'Framer Motion', icon: <SiFramer className="text-pink-500" /> },
+        { id: 15, name: 'Groq/Llama-3', icon: <SiOpenai className="text-orange-500" /> },
+        { id: 16, name: 'Docker', icon: <FaDocker className="text-blue-500" /> },
+        { id: 17, name: 'Vercel', icon: <SiVercel className="text-white" /> },
+        { id: 18, name: 'Git', icon: <FaGitAlt className="text-orange-600" /> },
+        { id: 19, name: 'Flutter', icon: <SiFlutter className="text-cyan-500" /> },
+        { id: 20, name: 'Java', icon: <FaJava className="text-red-500" /> },
+        { id: 21, name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
+        { id: 22, name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
+        { id: 23, name: 'Socket.IO', icon: <SiSocketdotio className="text-white" /> },
+        { id: 24, name: 'Radix UI', icon: <SiRadixui className="text-purple-400" /> }
     ];
 
     return (

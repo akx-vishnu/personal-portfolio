@@ -1,22 +1,24 @@
 # Portfolio Website
 
-A reactive personal portfolio website built with React, Vite, and Tailwind CSS. It features Hero, About, Skills, Projects, and Services sections to showcase professional work. A key highlight is the contact form integrated with Google Sheets via Apps Script for seamless, real-time message collection, all wrapped in a fully responsive, modern design.
+A high-performance, immersive personal portfolio website built with React, Vite, Three.js, and Tailwind CSS. It features dynamic 3D elements, smooth animations, and a seamless contact integration with Google Sheets, all optimized for a premium experience on both desktop and mobile.
 
 ## Features
 
--   **Responsive Design:** Fully responsive layout that works on all devices (desktop, tablet, mobile).
--   **Modern UI:** Built with Tailwind CSS for a clean and modern aesthetic.
--   **Smooth Animations:** Utilizes Framer Motion for engaging entry and scroll animations.
--   **Contact Form:** Integrated with Google Sheets using Google Apps Script to store form submissions.
--   **Component-Based:** Modular architecture using React components.
+-   **Immersive 3D Elements:** Features interactive 3D models (laptop, tech sphere) powered by Three.js and React Three Fiber.
+-   **Performance Optimized:** Fine-tuned for mobile with conditional 3D rendering and smooth scroll performance.
+-   **Responsive Design:** Fully adaptive layout ensuring a premium feel across all devices.
+-   **Modern UI/UX:** Sleek glassmorphism effects, magnetic buttons, and custom cursor interactions.
+-   **Smooth Animations:** Engaging entry and scroll transitions using Framer Motion.
+-   **Seamless Contact:** Integrated with Google Sheets via Apps Script for real-time form submissions.
+-   **Modular Architecture:** Built with a clean, component-based React structure.
 
 ## Tech Stack
 
--   **Frontend:** [React](https://reactjs.org/)
--   **Build Tool:** [Vite](https://vitejs.dev/)
--   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
--   **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+-   **Framework:** [React](https://reactjs.org/)
+-   **3D Engine:** [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)
 -   **Animations:** [Framer Motion](https://www.framer.com/motion/)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+-   **Build Tool:** [Vite](https://vitejs.dev/)
 -   **Form Backend:** Google Apps Script & Google Sheets
 
 ## Production Ready

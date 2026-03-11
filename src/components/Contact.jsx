@@ -25,6 +25,10 @@ const Contact = () => {
         setLoading(false);
         setStatus('SUCCESS');
         form.reset();
+
+        setTimeout(() => {
+            setStatus('');
+        }, 5000);
     };
 
     return (

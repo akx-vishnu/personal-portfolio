@@ -11,37 +11,38 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
+            title: 'EcoScan AI',
+            description: 'AI-powered food label analysis platform using Tesseract OCR and Groq Llama-3. Generates personalized health scores, eco impact ratings, and chatbot Q&A. Microservice architecture with FastAPI for OCR and Flask for main app logic. Presented at MESKCON International Conference 2026.',
+            techStack: ['React', 'Flask', 'FastAPI', 'SQLAlchemy', 'Groq / Llama-3', 'Tesseract OCR', 'JWT Auth'],
+            links: {
+                github: 'https://github.com/akx-vishnu/EcoScan-AI',
+            },
+            featured: true,
+        },
+        {
+            id: 2,
             title: 'RTS Fleet Manager',
-            description: 'A full-stack solution for transport operations. Key features: real-time vehicle tracking, automated route planning, driver/employee rostering, and trip analytics.',
-            techStack: ['NestJS', 'Next.js', 'PostgreSQL', 'Drizzle', 'Redis', 'Socket.IO', 'Leaflet'],
+            description: 'Real-time employee transportation & fleet management platform. Live vehicle tracking via WebSockets & Leaflet maps, admin dashboard, driver interface, roster/route/trip management, and audit logging.',
+            techStack: ['Next.js', 'NestJS', 'PostgreSQL', 'Socket.IO', 'Drizzle ORM', 'Three.js'],
             links: {
                 github: 'https://github.com/akx-vishnu/rts-fleet-manager',
             },
         },
         {
-            id: 2,
-            title: 'EcoScan AI',
-            description: 'An AI-powered food analysis application that scans product labels to analyze ingredients, nutrition, and environmental impact, providing personalized health and eco scores.',
-            techStack: ['React', 'Vite', 'Flask', 'FastAPI', 'SQLAlchemy', 'Tesseract OCR', 'Groq Llama-3'],
-            links: {
-                github: 'https://github.com/akx-vishnu/EcoScan-AI',
-            },
-        },
-        {
             id: 3,
-            title: 'Peepul Tree School',
-            description: 'A modern, nature-themed school website designed to improve admissions engagement through clean UI, smooth animations, and structured content for parents. Uses framer-motion and Tailwind CSS.',
-            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+            title: 'Rudra Travel Service',
+            description: 'Professional corporate transport website with pages for services, safety, fleet & clients. WhatsApp inquiry integration, Google Maps embed, responsive design with SEO meta management.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'React Router', 'Framer Motion'],
             links: {
-                github: 'https://github.com/akx-vishnu/Peepul-Tree-School',
-                demo: 'https://peepul-tree-school.vercel.app/',
+                github: 'https://github.com/akx-vishnu/rudratravelservice',
+                demo: 'https://rudratravelservice.vercel.app/',
             },
         },
         {
             id: 4,
             title: 'LittleCloud Baby Wear',
-            description: 'A premium React B2B portal for an organic baby clothing manufacturer. Features real-time search, category filtering, and direct WhatsApp integration for bulk inquiries. Offers high-performance aesthetics and a fully configurable content system via a central config file.',
-            techStack: ['React', 'Vite', 'Tailwind CSS', 'WhatsApp API'],
+            description: 'B2B digital showroom for a premium baby clothing brand. Real-time product search with auto-scroll, WhatsApp inquiry integration, fully configurable via TypeScript config file.',
+            techStack: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS'],
             links: {
                 github: 'https://github.com/akx-vishnu/littlecloud-clothingbrand',
                 demo: 'https://littlecloud-clothingbrand.vercel.app/',
@@ -49,29 +50,29 @@ const Projects = () => {
         },
         {
             id: 5,
-            title: 'Rudra Travel Service',
-            description: 'A professional, safety-first corporate transport website for Coimbatore. Features responsive design, Framer Motion animations, and Google Sheets integration for reliable employee commute management. Trustworthy, punctual, and MSME registered service since 2014.',
-            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Google Sheets'],
-            links: {
-                github: 'https://github.com/akx-vishnu/rudratravelservice',
-                demo: 'https://rudratravelservice.vercel.app/',
-            },
-        },
-        {
-            id: 6,
-            title: 'WebDev Portfolio',
-            description: 'A reactive personal portfolio website featuring smooth exit/entry scroll animations. Includes a contact form integrated with Google Sheets via Apps Script for seamless message collection.',
-            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+            title: 'Personal Portfolio',
+            description: 'Reactive personal portfolio with Hero, About, Skills, Projects, and Services sections. Contact form integrated with Google Sheets via Apps Script for real-time message collection.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Google Apps Script'],
             links: {
                 github: 'https://github.com/akx-vishnu/WebDev-Portfolio-Akshaj',
                 demo: 'https://akshajvnair.vercel.app/',
             },
         },
         {
+            id: 6,
+            title: 'Peepul Tree School',
+            description: 'Modern nature-themed school website with lightbox gallery, testimonials, animated timeline, Google Maps integration, WhatsApp contact form, and full SEO with JSON-LD structured data.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Helmet'],
+            links: {
+                github: 'https://github.com/akx-vishnu/Peepul-Tree-School',
+                demo: 'https://peepul-tree-school.vercel.app/',
+            },
+        },
+        {
             id: 7,
-            title: 'AbsoluteMinds Library Management System',
-            description: 'A full-featured desktop Library Management System built with Python, Tkinter, and MySQL. Manage books, users, and circulation — all from an intuitive GUI.',
-            techStack: ['Python', 'Tkinter', 'MySQL'],
+            title: 'AbsoluteMinds Library',
+            description: 'Desktop library management system with full CRUD, user authentication, book circulation tracking, bulk CSV import/export, and auto database setup with a normalized 3-table MySQL schema.',
+            techStack: ['Python', 'Tkinter', 'MySQL', 'PyMySQL', 'Pillow'],
             links: {
                 github: 'https://github.com/akx-vishnu/AbsoluteMinds-Library-Management-System',
             },
@@ -79,8 +80,8 @@ const Projects = () => {
         {
             id: 8,
             title: 'Movie2Reel',
-            description: 'A powerful Python CLI tool to efficiently split long videos into multiple short 9:16 vertical parts (reels), adding dynamic text overlays.',
-            techStack: ['Python', 'FFmpeg', 'Pillow'],
+            description: 'Python CLI tool that splits long videos into 9:16 vertical reels for TikTok/Reels/Shorts. Auto-overlays title, part number & branding. Batch organizes output into uploadable folders.',
+            techStack: ['Python', 'FFmpeg', 'CLI Tool'],
             links: {
                 github: 'https://github.com/akx-vishnu/Movie2Reel',
             },
@@ -88,8 +89,8 @@ const Projects = () => {
         {
             id: 9,
             title: 'Text2Reel',
-            description: 'A lightweight web application that takes custom text as input and generates a short, downloadable 18-second 9:16 video wrapped against an aesthetic background.',
-            techStack: ['Python', 'Flask', 'MoviePy', 'JavaScript'],
+            description: 'Web app that converts custom text into short portrait MP4 videos (1080×1920) with smart text wrapping and dark aesthetic styling. Cloud-deployed on Render.',
+            techStack: ['Flask', 'MoviePy', 'Pillow', 'Gunicorn', 'Render'],
             links: {
                 github: 'https://github.com/akx-vishnu/Text2Reel-Basic',
             },

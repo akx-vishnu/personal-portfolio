@@ -27,13 +27,14 @@ const Laptop = ({ isMobile }) => {
             group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, 0.25 + Math.sin(scrollFactor) * 0.3, 0.1);
             group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, scrollFactor * 0.5, 0.1);
             group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(scrollFactor * 0.5) * 0.1, 0.1);
-            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-5 + Math.sin(t)) / 5, 0.1);
+            // Move mobile laptop up significantly to center it in the smaller canvas
+            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (3 + Math.sin(t)) / 5, 0.1);
         } else {
             // Hover animation on desktop
             group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, Math.cos(t / 2) / 10 + 0.25, 0.1);
             group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, Math.sin(t / 4) / 10, 0.1);
             group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 4) / 20, 0.1);
-            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-5 + Math.sin(t)) / 5, 0.1);
+            group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-3 + Math.sin(t)) / 5, 0.1);
         }
     });
 

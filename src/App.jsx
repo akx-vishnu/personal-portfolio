@@ -6,6 +6,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Certifications from './components/Certifications'
 import Services from './components/Services'
 import Contact from './components/Contact'
 import SceneBackground from './components/canvas/SceneBackground'
@@ -54,8 +56,16 @@ function App() {
           <Skills />
         </section>
 
+        <section id="experience">
+          <Experience />
+        </section>
+
         <section id="projects">
           <Projects />
+        </section>
+
+        <section id="certifications">
+          <Certifications />
         </section>
 
         <section id="services">

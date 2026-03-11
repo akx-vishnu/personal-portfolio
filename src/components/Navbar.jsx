@@ -23,9 +23,11 @@ const Navbar = () => {
     const links = [
         { id: 1, link: 'about' },
         { id: 2, link: 'skills' },
-        { id: 3, link: 'projects' },
-        { id: 4, link: 'services' },
-        { id: 5, link: 'contact' },
+        { id: 3, link: 'experience' },
+        { id: 4, link: 'projects' },
+        { id: 5, link: 'certifications' },
+        { id: 6, link: 'services' },
+        { id: 7, link: 'contact' },
     ];
 
     return (
