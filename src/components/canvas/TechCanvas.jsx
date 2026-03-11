@@ -96,8 +96,12 @@ const Laptop = ({ isMobile }) => {
     );
 };
 
+import { useInView } from 'framer-motion';
+
 const TechCanvas = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "200px" });
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -107,22 +111,24 @@ const TechCanvas = () => {
     }, []);
 
     return (
-        <div className={`w-full h-[400px] md:h-full ${isMobile ? '' : 'cursor-grab active:cursor-grabbing'}`}>
-            <Canvas
-                camera={{ position: [0, 0, isMobile ? 9 : 6], fov: isMobile ? 55 : 45 }}
-                style={{ touchAction: isMobile ? 'auto' : 'none' }}
-            >
-                <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} intensity={1.5} />
-                <pointLight position={[-10, -10, -10]} intensity={0.5} color="#bc13fe" />
+        <div ref={ref} className={`w-full h-[400px] md:h-full ${isMobile ? '' : 'cursor-grab active:cursor-grabbing'}`}>
+            {isInView && (
+                <Canvas
+                    camera={{ position: [0, 0, isMobile ? 9 : 6], fov: isMobile ? 55 : 45 }}
+                    style={{ touchAction: isMobile ? 'auto' : 'none' }}
+                >
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} intensity={1.5} />
+                    <pointLight position={[-10, -10, -10]} intensity={0.5} color="#bc13fe" />
 
-                <Suspense fallback={null}>
-                    <Laptop isMobile={isMobile} />
-                    <Environment preset="city" />
-                    <ContactShadows position={[0, -2, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />
-                    {!isMobile && <OrbitControls enableZoom={false} enablePan={false} />}
-                </Suspense>
-            </Canvas>
+                    <Suspense fallback={null}>
+                        <Laptop isMobile={isMobile} />
+                        <Environment preset="city" />
+                        <ContactShadows position={[0, -2, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />
+                        {!isMobile && <OrbitControls enableZoom={false} enablePan={false} />}
+                    </Suspense>
+                </Canvas>
+            )}
         </div>
     );
 };

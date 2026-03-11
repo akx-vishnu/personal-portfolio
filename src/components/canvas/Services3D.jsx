@@ -38,15 +38,21 @@ const FloatingShapes = ({ count = 50 }) => {
         </group>
     );
 };
+import { useInView } from 'framer-motion';
 
 const Services3D = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "200px" });
+
     return (
-        <div className="absolute inset-0 z-0 w-full h-full pointer-events-none">
-            <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} intensity={0.5} />
-                <FloatingShapes />
-            </Canvas>
+        <div ref={ref} className="absolute inset-0 z-0 w-full h-full pointer-events-none">
+            {isInView && (
+                <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} intensity={0.5} />
+                    <FloatingShapes />
+                </Canvas>
+            )}
         </div>
     );
 };

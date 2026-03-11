@@ -47,14 +47,21 @@ const ConnectingLines = () => {
     );
 };
 
+import { useInView } from 'framer-motion';
+
 const About3D = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "200px" });
+
     return (
-        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-            <Canvas camera={{ position: [0, 0, 5] }}>
-                <ambientLight intensity={0.5} />
-                <TechParticles />
-                <ConnectingLines />
-            </Canvas>
+        <div ref={ref} className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+            {isInView && (
+                <Canvas camera={{ position: [0, 0, 5] }}>
+                    <ambientLight intensity={0.5} />
+                    <TechParticles />
+                    <ConnectingLines />
+                </Canvas>
+            )}
         </div>
     );
 };

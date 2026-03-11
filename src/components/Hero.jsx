@@ -62,12 +62,6 @@ const Hero = () => {
                                 <button
                                     onClick={() => {
                                         window.open("/Resume - Akshaj V Nair.pdf", "_blank");
-                                        const link = document.createElement('a');
-                                        link.href = "/Resume - Akshaj V Nair.pdf";
-                                        link.download = "Resume - Akshaj V Nair.pdf";
-                                        document.body.appendChild(link);
-                                        link.click();
-                                        document.body.removeChild(link);
                                     }}
                                     className="group text-white w-fit px-8 py-3 flex items-center rounded-full border border-gray-500 hover:border-neon-purple hover:text-neon-purple hover:bg-gray-800/30 cursor-pointer duration-300"
                                 >

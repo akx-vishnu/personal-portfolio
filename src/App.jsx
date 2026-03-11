@@ -11,7 +11,29 @@ import Contact from './components/Contact'
 import SceneBackground from './components/canvas/SceneBackground'
 import CustomCursor from './components/ui/CustomCursor'
 
+import { useEffect } from 'react'
+import Lenis from 'lenis'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+
+    return () => {
+      lenis.destroy()
+      gsap.ticker.remove(lenis.raf)
+    }
+  }, [])
+
   return (
     <div className="text-gray-300 relative bg-transparent">
       <CustomCursor />

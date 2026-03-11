@@ -37,8 +37,8 @@ const RotatingSphere = ({ skills }) => {
 
     useFrame((state, delta) => {
         if (groupRef.current) {
-            groupRef.current.rotation.y += delta * 0.1;
-            groupRef.current.rotation.x += delta * 0.05;
+            groupRef.current.rotation.y += delta * 0.2;
+            groupRef.current.rotation.x += delta * 0.15;
         }
     });
 
@@ -56,15 +56,29 @@ const RotatingSphere = ({ skills }) => {
     );
 };
 
+import { useInView } from 'framer-motion';
+
 const SkillSphere = ({ skills }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "200px" });
+
     return (
-        <div className="w-full h-full min-h-[500px] cursor-grab active:cursor-grabbing">
-            <Canvas camera={{ position: [0, 0, 7], fov: 60 }} gl={{ preserveDrawingBuffer: true }}>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} />
-                <RotatingSphere skills={skills} />
-                <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
-            </Canvas>
+        <div ref={ref} className="w-full h-full min-h-[500px] cursor-grab active:cursor-grabbing">
+            {isInView && (
+                <Canvas camera={{ position: [0, 0, 9.5], fov: 60 }} gl={{ preserveDrawingBuffer: true }}>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} />
+                    <RotatingSphere skills={skills} />
+                    <OrbitControls 
+                        enableZoom={false} 
+                        enablePan={false} 
+                        autoRotate 
+                        autoRotateSpeed={3}
+                        enableDamping={true}
+                        dampingFactor={0.05}
+                    />
+                </Canvas>
+            )}
         </div>
     );
 };

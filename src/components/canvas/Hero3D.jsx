@@ -44,18 +44,25 @@ const AnimatedSphere = () => {
     );
 };
 
+import { useInView } from 'framer-motion';
+
 const Hero3D = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: "200px" });
+
     return (
-        <div className="w-full h-auto absolute inset-0 z-0">
-            <Canvas camera={{ position: [0, 0, 5] }}>
-                <Suspense fallback={null}>
-                    <ambientLight intensity={1} />
-                    <directionalLight position={[3, 2, 1]} />
-                    <Stars />
-                    <OrbitControls enableZoom={false} autoRotate speed={0.5} />
-                </Suspense>
-                <Preload all />
-            </Canvas>
+        <div ref={ref} className="w-full h-auto absolute inset-0 z-0">
+            {isInView && (
+                <Canvas camera={{ position: [0, 0, 5] }}>
+                    <Suspense fallback={null}>
+                        <ambientLight intensity={1} />
+                        <directionalLight position={[3, 2, 1]} />
+                        <Stars />
+                        <OrbitControls enableZoom={false} autoRotate speed={0.5} />
+                    </Suspense>
+                    <Preload all />
+                </Canvas>
+            )}
         </div>
     );
 };
