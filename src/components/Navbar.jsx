@@ -44,7 +44,7 @@ const Navbar = () => {
                     </h1>
                 </div>
 
-                <ul className="hidden md:flex">
+                <ul className="hidden md:flex items-center">
                     {links.map(({ id, link }) => (
                         <li
                             key={id}
@@ -55,6 +55,9 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
+                    <li className="ml-4 px-4 py-2 rounded-full border border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all duration-300 cursor-pointer text-sm font-bold">
+                        <a href="/minimalist.html">Minimalist</a>
+                    </li>
                 </ul>
 
                 <div
@@ -92,6 +95,9 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             ))}
+                            <li className="px-4 py-6 text-4xl text-neon-purple font-bold hover:scale-110 transition-transform">
+                                <a href="/minimalist.html" onClick={() => setNav(!nav)}>Minimalist</a>
+                            </li>
                         </motion.ul>
                     )}
                 </AnimatePresence>
