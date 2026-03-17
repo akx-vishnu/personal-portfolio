@@ -20,6 +20,10 @@ A high-performance, immersive personal portfolio website built with React, Vite,
 -   **Python Programming Intern** at **KELTRON** (Apr 2025 – May 2025)
 -   **Data Entry Operator** at **Rudra Travel Service** (Mar 2023 – May 2024)
 
+## Certifications
+
+All certifications listed in this portfolio are synchronized between the main React version and the minimalist HTML version to ensure consistency across all platforms. These include credentials from IIT Bombay, Keltron, and more.
+
 ## Tech Stack
 
 -   **Framework:** [React](https://reactjs.org/)

@@ -4,19 +4,20 @@ import TiltCard from './ui/TiltCard';
 
 const Certifications = () => {
     const certs = [
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "Bootstrap", score: "97.5%", icon: "🏛️", color: "text-orange-500" },
-        { issuer: "IIT Bombay · EduPyramids", name: "Android & Kotlin", score: "95%", icon: "🤖", color: "text-green-500" },
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "Git", score: "93.3%", icon: "🔧", color: "text-red-500" },
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "Java", score: "87.5%", icon: "☕", color: "text-brown-500" },
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "R Programming", score: "82.5%", icon: "📊", color: "text-blue-500" },
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "Python", score: "75%", icon: "🐍", color: "text-yellow-500" },
+        { issuer: "IIT Bombay · EduPyramids", name: "Bootstrap", score: "97.50%", icon: "🏛️", color: "text-orange-500" },
+        { issuer: "IIT Bombay · EduPyramids", name: "Android App using Kotlin", score: "95.00%", icon: "🤖", color: "text-green-500" },
+        { issuer: "IIT Bombay · EduPyramids", name: "Git", score: "93.33%", icon: "🔧", color: "text-red-500" },
+        { issuer: "IIT Bombay · EduPyramids", name: "Java", score: "87.50%", icon: "☕", color: "text-brown-500" },
+        { issuer: "IIT Bombay · EduPyramids", name: "PERL", score: "86.67%", icon: "🐪", color: "text-blue-400" },
+        { issuer: "IIT Bombay · Spoken Tutorial", name: "R Programming", score: "82.50%", icon: "📊", color: "text-blue-500" },
+        { issuer: "IIT Bombay · Spoken Tutorial", name: "Python 3.4.3", score: "75.00%", icon: "🐍", color: "text-yellow-500" },
         { issuer: "IIT Bombay · Spoken Tutorial", name: "PHP and MySQL", score: "75.00%", icon: "🐘", color: "text-blue-400" },
-        { issuer: "IIT Bombay · Spoken Tutorial", name: "JavaScript", score: "70%", icon: "🌐", color: "text-yellow-400" },
-        { issuer: "TaLim AI", name: "Prompt Engineering", icon: "🧠", color: "text-purple-500" },
+        { issuer: "IIT Bombay · Spoken Tutorial", name: "JavaScript", score: "70.00%", icon: "🌐", color: "text-yellow-400" },
+        { issuer: "TaLim AI", name: "Prompt Engineering", score: "x 2 Courses", icon: "🧠", color: "text-purple-500" },
         { issuer: "Corizo", name: "Web Development", score: "Oct - Nov 2024", icon: "💻", color: "text-blue-500" },
-        { issuer: "Corizo", name: "Cybersecurity Training", icon: "🔒", color: "text-cyan-500" },
+        { issuer: "Corizo", name: "Cybersecurity Training", score: "Sep - Oct 2024", icon: "🔒", color: "text-cyan-500" },
         { issuer: "KELTRON", name: "Python Programming Internship", score: "Apr - May 2025", icon: "🐍", color: "text-green-500" },
-        { issuer: "MESKCON 2026", name: "Paper Presenter — EcoScan AI", icon: "🎤", color: "text-pink-500" }
+        { issuer: "MESKCON 2026", name: "Paper Presenter - EcoScan AI", score: "Jan 2026", icon: "🎤", color: "text-pink-500" }
     ];
 
     return (
