@@ -54,11 +54,11 @@ const Hero = () => {
                         {/* Stats Section */}
                         <div className="flex gap-8 mt-2 mb-4">
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-white">9</span>
+                                <span className="text-3xl font-bold text-white">10</span>
                                 <span className="text-xs text-gray-400 uppercase tracking-widest font-mono">Projects</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-white">10</span>
+                                <span className="text-3xl font-bold text-white">13</span>
                                 <span className="text-xs text-gray-400 uppercase tracking-widest font-mono">Certs</span>
                             </div>
                             <div className="flex flex-col">
