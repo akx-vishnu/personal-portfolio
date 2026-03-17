@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A high-performance, immersive personal portfolio website built with React, Vite, Three.js, and Tailwind CSS. It features dynamic 3D elements, smooth animations, and a seamless contact integration with Google Sheets, all optimized for a premium experience on both desktop and mobile.
+A high-performance, immersive personal portfolio website built with React, Vite, Three.js, and Tailwind CSS. It features dynamic 3D elements, smooth animations, and a seamless contact integration with WhatsApp, all optimized for a premium experience on both desktop and mobile.
 
 ## Features
 
@@ -9,7 +9,7 @@ A high-performance, immersive personal portfolio website built with React, Vite,
 -   **Responsive Design:** Fully adaptive layout ensuring a premium feel across all devices.
 -   **Modern UI/UX:** Sleek glassmorphism effects, magnetic buttons, and custom cursor interactions.
 -   **Smooth Animations:** Engaging entry and scroll transitions using Framer Motion.
--   **Seamless Contact:** Integrated with Google Sheets via Apps Script for real-time form submissions.
+-   **Seamless Contact:** Integrated with WhatsApp for real-time form-to-chat inquiry handling.
 -   **Modular Architecture:** Built with a clean, component-based React structure.
 -   **Up-to-Date Experience:** Regularly updated to reflect the latest professional journey and skills.
 
@@ -27,7 +27,7 @@ A high-performance, immersive personal portfolio website built with React, Vite,
 -   **Animations:** [Framer Motion](https://www.framer.com/motion/)
 -   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 -   **Build Tool:** [Vite](https://vitejs.dev/)
--   **Form Backend:** Google Apps Script & Google Sheets
+-   **Inquiry System:** WhatsApp Cloud API / WA.me Redirect
 
 ## Production Ready
 
@@ -45,6 +45,4 @@ To deploy this project:
 
 ## Configuration
 
-### Contact Form Setup
-
-The contact form is configured to send data to a Google Sheet. For detailed setup instructions, please refer to [google_sheets_setup.md](google_sheets_setup.md).
+The contact form is configured to redirect users to WhatsApp with a pre-filled message containing their inquiry details.

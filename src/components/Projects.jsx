@@ -63,8 +63,8 @@ const Projects = () => {
         {
             id: 6,
             title: 'Personal Portfolio',
-            description: 'Reactive personal portfolio with Hero, About, Skills, Projects, and Services sections. Contact form integrated with Google Sheets via Apps Script for real-time message collection.',
-            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Google Apps Script'],
+            description: 'Reactive personal portfolio with Hero, About, Skills, Projects, and Services sections. Contact form integrated with WhatsApp for real-time inquiry handling.',
+            techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'WhatsApp Integration'],
             links: {
                 github: 'https://github.com/akx-vishnu/WebDev-Portfolio-Akshaj',
                 demo: 'https://akshajvnair.vercel.app/',

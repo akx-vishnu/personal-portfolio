@@ -10,9 +10,12 @@ const Certifications = () => {
         { issuer: "IIT Bombay · Spoken Tutorial", name: "Java", score: "87.5%", icon: "☕", color: "text-brown-500" },
         { issuer: "IIT Bombay · Spoken Tutorial", name: "R Programming", score: "82.5%", icon: "📊", color: "text-blue-500" },
         { issuer: "IIT Bombay · Spoken Tutorial", name: "Python", score: "75%", icon: "🐍", color: "text-yellow-500" },
+        { issuer: "IIT Bombay · Spoken Tutorial", name: "PHP and MySQL", score: "75.00%", icon: "🐘", color: "text-blue-400" },
         { issuer: "IIT Bombay · Spoken Tutorial", name: "JavaScript", score: "70%", icon: "🌐", color: "text-yellow-400" },
         { issuer: "TaLim AI", name: "Prompt Engineering", icon: "🧠", color: "text-purple-500" },
+        { issuer: "Corizo", name: "Web Development", score: "Oct - Nov 2024", icon: "💻", color: "text-blue-500" },
         { issuer: "Corizo", name: "Cybersecurity Training", icon: "🔒", color: "text-cyan-500" },
+        { issuer: "KELTRON", name: "Python Programming Internship", score: "Apr - May 2025", icon: "🐍", color: "text-green-500" },
         { issuer: "MESKCON 2026", name: "Paper Presenter — EcoScan AI", icon: "🎤", color: "text-pink-500" }
     ];
 
