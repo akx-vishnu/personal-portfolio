@@ -26,14 +26,14 @@ const Certifications = () => {
 
             <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full relative z-10">
                 <div className="pb-12 text-center">
-                    <motion.p
+                    <motion.h2
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-4xl font-bold inline border-b-4 border-neon-purple text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-blue uppercase tracking-wider"
                     >
                         Certifications
-                    </motion.p>
+                    </motion.h2>
                     <p className="py-6 text-gray-400 text-lg">Credentials and Achievements</p>
                 </div>
 

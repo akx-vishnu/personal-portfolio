@@ -14,14 +14,14 @@ const About = () => {
 
             <div className="max-w-screen-xl mx-auto px-4 flex flex-col justify-center w-full h-full relative z-10">
                 <div className="pb-8">
-                    <motion.p
+                    <motion.h2
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-4xl font-bold inline border-b-4 border-neon-blue text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple"
                     >
                         About
-                    </motion.p>
+                    </motion.h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

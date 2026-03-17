@@ -41,14 +41,14 @@ const Contact = () => {
 
             <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full relative z-10">
                 <div className="pb-8 text-center md:text-left">
-                    <motion.p
+                    <motion.h2
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-4xl font-bold inline border-b-4 border-neon-purple text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple"
                     >
                         Contact
-                    </motion.p>
+                    </motion.h2>
                     <p className="py-6 text-gray-300">Submit the form below to get in touch with me</p>
                 </div>
 

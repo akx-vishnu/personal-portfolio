@@ -40,9 +40,9 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-2 tracking-tight">
+                        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-2 tracking-tight">
                             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">AKSHAJ V NAIR</span>
-                        </h2>
+                        </h1>
                         <h3 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-2">
                             <span className="text-neon-blue">Full Stack Developer</span> | Building scalable web systems
                         </h3>
