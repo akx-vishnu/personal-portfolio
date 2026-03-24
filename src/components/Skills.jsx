@@ -29,7 +29,11 @@ const Skills = () => {
         { id: 21, name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
         { id: 22, name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
         { id: 23, name: 'Socket.IO', icon: <SiSocketdotio className="text-white" /> },
-        { id: 24, name: 'Radix UI', icon: <SiRadixui className="text-purple-400" /> }
+        { id: 24, name: 'Radix UI', icon: <SiRadixui className="text-purple-400" /> },
+        { id: 25, name: 'Cursor', icon: <span className="font-bold text-blue-400 text-3xl">CR</span> },
+        { id: 26, name: 'Claude Code', icon: <span className="font-bold text-orange-400 text-3xl">CC</span> },
+        { id: 27, name: 'GitHub Copilot', icon: <span className="font-bold text-white text-3xl">CP</span> },
+        { id: 28, name: 'Google Antigravity', icon: <span className="font-bold text-blue-500 text-3xl">GA</span> }
     ];
 
     return (

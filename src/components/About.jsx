@@ -33,7 +33,7 @@ const About = () => {
                     >
                         <div className="glass-card p-8 rounded-2xl border border-gray-700/50 shadow-card">
                             <p className="text-lg leading-relaxed text-gray-300">
-                                I’m a <strong className="text-white">B.Sc. Computer Science graduate</strong> and a versatile <strong className="text-neon-blue">Full Stack Developer</strong> building modern, high-performance web applications. I specialize in React and integrated full-stack architectures, creating fast, scalable, and visually engaging digital experiences from frontend to backend.
+                                I’m a <strong className="text-white">B.Sc. Computer Science graduate</strong> and a versatile <strong className="text-neon-blue">AI-Native Full Stack Developer</strong> building modern, high-performance web applications. I specialize in React and integrated full-stack architectures, creating fast, scalable, and visually engaging digital experiences from frontend to backend.
                             </p>
                             <br />
                             <p className="text-lg leading-relaxed text-gray-300">

@@ -44,11 +44,11 @@ const Hero = () => {
                             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">AKSHAJ V NAIR</span>
                         </h1>
                         <h3 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-2">
-                            <span className="text-neon-blue">Full Stack Developer</span> | Building scalable web systems
+                            <span className="text-neon-blue">AI-Native Full Stack Developer</span> | Architecting intelligent, scalable web systems
                         </h3>
 
                         <p className="text-gray-200 py-2 max-w-lg text-lg leading-relaxed">
-                            Full Stack Developer crafting end-to-end web solutions from AI-powered applications to real-time industrial platforms. Passionate about architecture and elegant UIs.
+                            AI-Native Full Stack Developer crafting end-to-end web solutions from AI-powered applications to real-time industrial platforms. Passionate about architecture and elegant UIs.
                         </p>
 
                         {/* Stats Section */}
@@ -58,7 +58,7 @@ const Hero = () => {
                                 <span className="text-xs text-gray-400 uppercase tracking-widest font-mono">Projects</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-white">14</span>
+                                <span className="text-3xl font-bold text-white">28</span>
                                 <span className="text-xs text-gray-400 uppercase tracking-widest font-mono">Certs</span>
                             </div>
                             <div className="flex flex-col">

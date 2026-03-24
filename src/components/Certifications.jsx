@@ -17,7 +17,21 @@ const Certifications = () => {
         { issuer: "Corizo", name: "Web Development", score: "Oct - Nov 2024", icon: "💻", color: "text-blue-500" },
         { issuer: "Corizo", name: "Cybersecurity Training", score: "Sep - Oct 2024", icon: "🔒", color: "text-cyan-500" },
         { issuer: "KELTRON", name: "Python Programming Internship", score: "Apr - May 2025", icon: "🐍", color: "text-green-500" },
-        { issuer: "MESKCON 2026", name: "Paper Presenter - EcoScan AI", score: "Jan 2026", icon: "🎤", color: "text-pink-500" }
+        { issuer: "MESKCON 2026", name: "Paper Presenter - EcoScan AI", score: "Jan 2026", icon: "🎤", color: "text-pink-500" },
+        { issuer: "IBM · Coursera", name: "Introduction to Software Engineering", score: "Jun 2025", icon: "💻", color: "text-blue-500" },
+        { issuer: "IBM · Coursera", name: "Python for Data Science, AI & Development", score: "Mar 2026", icon: "🐍", color: "text-blue-500" },
+        { issuer: "IBM · Coursera", name: "Generative AI: Prompt Engineering Basics", score: "Mar 2026", icon: "🤖", color: "text-blue-500" },
+        { issuer: "IBM · Credly", name: "Generative AI: Prompt Engineering", score: "Mar 2026", icon: "🏅", color: "text-blue-500" },
+        { issuer: "IBM · Credly", name: "Python for Data Science and AI", score: "Mar 2026", icon: "🏅", color: "text-blue-500" },
+        { issuer: "Google · Coursera", name: "Introduction to AI", score: "Mar 2026", icon: "🤖", color: "text-green-500" },
+        { issuer: "Google · Coursera", name: "Accelerate Your Job Search with AI", score: "Mar 2026", icon: "🚀", color: "text-green-500" },
+        { issuer: "Coursera", name: "Generative AI and Large Language Models", score: "Mar 2026", icon: "🧠", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "Google Ads for Beginners", score: "Mar 2026", icon: "📈", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "SEO with Squarespace", score: "Mar 2026", icon: "🔍", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "Create an E-Commerce Store with Shopify", score: "Mar 2026", icon: "🛒", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "Create Charts & Dashboards — Microsoft Excel", score: "Mar 2026", icon: "📊", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "Create a Project Management Tracker — Excel", score: "Mar 2026", icon: "📅", color: "text-blue-400" },
+        { issuer: "Coursera · Project", name: "Basic Formulas and Functions — Microsoft Excel", score: "Mar 2026", icon: "🧮", color: "text-blue-400" }
     ];
 
     return (

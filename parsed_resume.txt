@@ -1,0 +1,153 @@
+================================================================================
+RESUME - AKSHAJ V NAIR
+================================================================================
+
+PERSONAL INFORMATION
+--------------------
+Name:       Akshaj V Nair
+Location:   Kochi, India
+Phone:      +91 9496202179
+Email:      akx_vishnu@pm.me
+LinkedIn:   linkedin.com/in/akx-vishnu
+GitHub:     github.com/akx-vishnu
+Portfolio:  akshajvnair.vercel.app/minimalist
+
+
+PROFESSIONAL SUMMARY
+--------------------
+Full Stack Developer specialising in React and Python, with a track record of
+shipping end-to-end web applications integrating REST APIs, PostgreSQL, and LLMs.
+Experienced with AI-native development workflows (Google Antigravity, Cursor,
+Claude Code, GitHub Copilot) to iterate rapidly on real-world projects.
+
+
+SKILLS
+------
+Languages:
+  Python, Java, HTML5, CSS3, JavaScript, TypeScript
+
+Backend & APIs:
+  Flask, FastAPI, NestJS, Node.js (Basic), REST APIs, JWT Authentication, Socket.IO
+
+Databases & ORM:
+  PostgreSQL, MySQL, SQLite, SQLAlchemy, Drizzle ORM, Redis
+
+Frontend:
+  React.js, Next.js, Vite, Tailwind CSS, Framer Motion, Radix UI
+
+Mobile:
+  Android App Development (Kotlin), Flutter, React Native
+
+Tools & Cloud:
+  Git, GitHub, Docker, Vercel, Render, Tesseract OCR
+
+AI:
+  LLM Integration (Groq · Ollama · Llama-3), Prompt Engineering
+
+Productivity:
+  Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Google Sheets
+
+Soft Skills:
+  Technical Problem-Solving · Analytical Thinking & Research · Adaptability &
+  Continuous Learning · Project & Time Management · Operations Management ·
+  Teamwork & Leadership
+
+
+PROJECTS
+--------
+1. EcoScan AI - AI-Powered Food Label Analyzer
+   Tech Stack: React · Flask · FastAPI · PostgreSQL
+   - Built a full-stack AI web app using a decoupled microservices architecture
+     (Flask + FastAPI) with a dedicated OCR service (Tesseract, OpenCV) and
+     Groq Llama-3 for real-time ingredient analysis, health scoring, and an AI
+     chatbot.
+   - Engineered secure user accounts with bcrypt password hashing and Flask-Login
+     session management; persisted scan history, dietary preferences, and allergy
+     data via SQLAlchemy ORM on PostgreSQL.
+
+2. RTS Fleet Manager - Real-time Fleet & Transport Management System
+   Tech Stack: Next.js · NestJS · PostgreSQL · Socket.IO
+   - Built a full-stack employee transport platform supporting 50-60 concurrent
+     drivers with sub-second live vehicle tracking via Socket.IO WebSockets,
+     Redis caching, Leaflet maps, and Three.js visualisations.
+   - Architected a modular NestJS backend with 13 feature modules (Auth, Fleet,
+     Routes, Rosters, Trips, Analytics, Audit, Events and more); used Drizzle ORM
+     over TypeORM/Prisma for reduced query overhead and lower memory footprint.
+
+3. AbsoluteMinds - Library Management System
+   Tech Stack: Python · Tkinter · MySQL
+   - Desktop app with full CRUD operations for book inventory, user auth,
+     issue/return tracking, and CSV bulk operations; auto-database setup with
+     normalized 3-table MySQL schema.
+
+
+WORK EXPERIENCE
+---------------
+Python Programming Intern - ITBG, Knowledge Services Group
+  Company:  Kerala State Electronics Development Corporation Ltd. (KELTRON), Palakkad
+  Duration: Apr 2025 - May 2025
+  - Completed a 2-week intensive program covering Python programming, data
+    structures, and GUI development using Tkinter.
+
+Cybersecurity Intern
+  Company:  Corizo
+  Duration: Sep 2024 - Oct 2024
+  - Completed a one-month cybersecurity training and internship program covering
+    core security concepts and practices.
+
+Data Entry Operator (Part-time)
+  Company:  Rudra Travel Service, Coimbatore
+  Duration: Mar 2023 - May 2024
+  - Managed high-volume data entry, client records, and spreadsheet maintenance
+    using Microsoft Excel and Google Sheets.
+
+
+EDUCATION
+---------
+B.Sc. Computer Science
+  Institution: Yuvakshetra Institute of Management Studies, Palakkad (NAAC A)
+               University of Calicut
+  Duration:    2023 - 2026
+
+Class XII - CBSE
+  Percentage:  86.2% | Computer Science: 97/100 (A1)
+  Institution: Bharathamatha CMI Public School, Palakkad
+  Year:        2023
+
+Class X - CBSE
+  Percentage:  89.2%
+  Institution: Bharathamatha CMI Public School, Palakkad
+  Year:        2021
+
+
+RESEARCH & PUBLICATIONS
+------------------------
+Paper Presenter - MESKCON International Conference 2026
+  Venue:    MES Kalladi College (NAAC A++), Kerala | Kerala State Higher Education Council
+  Date:     Jan 2026
+  Paper:    "EcoScan AI - Personalized, AI-based, Eco-friendly Food Product
+             Scanning System."
+
+
+CERTIFICATIONS
+--------------
+IIT Bombay (Spoken Tutorial / EduPyramids):
+  JavaScript · Python · PHP & MySQL · R · PERL · Java · Git ·
+  Android & Kotlin · Bootstrap
+
+IBM / Google (Coursera):
+  Python for Data Science & AI · Generative AI & Large Language Models ·
+  Generative AI: Prompt Engineering Basics · Introduction to AI
+
+TaLim AI:
+  Prompt Engineering · Educational Prompt Engineering with TaLim AI
+
+Corizo:
+  Cybersecurity Training & Internship
+
+
+LANGUAGES
+---------
+English (Professional) · Malayalam (Native) · Tamil (Intermediate) · Hindi (Elementary)
+
+================================================================================
