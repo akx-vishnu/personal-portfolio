@@ -42,6 +42,16 @@ const Projects = () => {
         },
         {
             id: 4,
+            title: 'Paru Shopping',
+            description: 'Modern image-rich e-commerce web app for a local grocery & daily essentials store in Kochi, Kerala. Features WhatsApp cart ordering, 25 products across 5 categories, smart shop page with search & price filter, and a mobile-first responsive UI.',
+            techStack: ['React 19', 'Vite', 'Tailwind CSS v4', 'React Router v7', 'Lucide React'],
+            links: {
+                github: 'https://github.com/akx-vishnu/paru-shopping',
+                demo: 'https://paru-shopping.vercel.app/',
+            },
+        },
+        {
+            id: 5,
             title: 'Rudra Travel Service',
             description: 'Professional corporate transport website with pages for services, safety, fleet & clients. WhatsApp inquiry integration, Google Maps embed, responsive design with SEO meta management.',
             techStack: ['React', 'Vite', 'Tailwind CSS', 'React Router', 'Framer Motion'],
@@ -51,7 +61,7 @@ const Projects = () => {
             },
         },
         {
-            id: 5,
+            id: 6,
             title: 'LittleCloud Baby Wear',
             description: 'B2B digital showroom for a premium baby clothing brand. Real-time product search with auto-scroll, WhatsApp inquiry integration, fully configurable via TypeScript config file.',
             techStack: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS'],
@@ -61,7 +71,7 @@ const Projects = () => {
             },
         },
         {
-            id: 6,
+            id: 7,
             title: 'Personal Portfolio',
             description: 'Reactive personal portfolio with Hero, About, Skills, Projects, and Services sections. Contact form integrated with WhatsApp for real-time inquiry handling.',
             techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'WhatsApp Integration'],
@@ -71,7 +81,7 @@ const Projects = () => {
             },
         },
         {
-            id: 7,
+            id: 8,
             title: 'Peepul Tree School',
             description: 'Modern nature-themed school website with lightbox gallery, testimonials, animated timeline, Google Maps integration, WhatsApp contact form, and full SEO with JSON-LD structured data.',
             techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Helmet'],
@@ -81,7 +91,7 @@ const Projects = () => {
             },
         },
         {
-            id: 8,
+            id: 9,
             title: 'AbsoluteMinds Library',
             description: 'Desktop library management system with full CRUD, user authentication, book circulation tracking, bulk CSV import/export, and auto database setup with a normalized 3-table MySQL schema.',
             techStack: ['Python', 'Tkinter', 'MySQL', 'PyMySQL', 'Pillow'],
@@ -90,7 +100,7 @@ const Projects = () => {
             },
         },
         {
-            id: 9,
+            id: 10,
             title: 'Movie2Reel',
             description: 'Python CLI tool that splits long videos into 9:16 vertical reels for TikTok/Reels/Shorts. Auto-overlays title, part number & branding. Batch organizes output into uploadable folders.',
             techStack: ['Python', 'FFmpeg', 'CLI Tool'],
@@ -99,22 +109,12 @@ const Projects = () => {
             },
         },
         {
-            id: 10,
+            id: 11,
             title: 'Text2Reel',
             description: 'Web app that converts custom text into short portrait MP4 videos (1080×1920) with smart text wrapping and dark aesthetic styling. Cloud-deployed on Render.',
             techStack: ['Flask', 'MoviePy', 'Pillow', 'Gunicorn', 'Render'],
             links: {
                 github: 'https://github.com/akx-vishnu/Text2Reel-Basic',
-            },
-        },
-        {
-            id: 11,
-            title: 'Paru Shopping',
-            description: 'Modern image-rich e-commerce web app for a local grocery & daily essentials store in Kochi, Kerala. Features WhatsApp cart ordering, 25 products across 5 categories, smart shop page with search & price filter, and a mobile-first responsive UI.',
-            techStack: ['React 19', 'Vite', 'Tailwind CSS v4', 'React Router v7', 'Lucide React'],
-            links: {
-                github: 'https://github.com/akx-vishnu/paru-shopping',
-                demo: 'https://paru-shopping.vercel.app/',
             },
         }
     ];
