@@ -106,6 +106,16 @@ const Projects = () => {
             links: {
                 github: 'https://github.com/akx-vishnu/Text2Reel-Basic',
             },
+        },
+        {
+            id: 11,
+            title: 'Paru Shopping',
+            description: 'Modern image-rich e-commerce web app for a local grocery & daily essentials store in Kochi, Kerala. Features WhatsApp cart ordering, 25 products across 5 categories, smart shop page with search & price filter, and a mobile-first responsive UI.',
+            techStack: ['React 19', 'Vite', 'Tailwind CSS v4', 'React Router v7', 'Lucide React'],
+            links: {
+                github: 'https://github.com/akx-vishnu/paru-shopping',
+                demo: 'https://paru-shopping.vercel.app/',
+            },
         }
     ];
 
