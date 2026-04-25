@@ -17,6 +17,7 @@ const Certifications = () => {
         { issuer: "Corizo", name: "Web Development", score: "Oct - Nov 2024", icon: "💻", color: "text-blue-500" },
         { issuer: "Corizo", name: "Cybersecurity Training", score: "Sep - Oct 2024", icon: "🔒", color: "text-cyan-500" },
         { issuer: "KELTRON", name: "Python Programming Internship", score: "Apr - May 2025", icon: "🐍", color: "text-green-500" },
+        { issuer: "Technovalley · Advanced Knowledge Services", name: "AI Career Orientation (5-Day)", score: "Nov 2025", icon: "🤖", color: "text-red-500" },
         { issuer: "MESKCON 2026", name: "Paper Presenter - EcoScan AI", score: "Jan 2026", icon: "🎤", color: "text-pink-500" },
         { issuer: "IBM · Coursera", name: "Introduction to Software Engineering", score: "Jun 2025", icon: "💻", color: "text-blue-500" },
         { issuer: "IBM · Coursera", name: "Python for Data Science, AI & Development", score: "Mar 2026", icon: "🐍", color: "text-blue-500" },
